@@ -3,11 +3,27 @@ import Link from "next/link";
 const nav = [
   {
     href: "/",
-    label: "About",
+    label: "Home",
   },
   {
-    href: "/resume",
-    label: "Resume",
+    href: "/",
+    label: "Cursos e Programas",
+  },
+  {
+    href: "/",
+    label: "Eventos",
+  },
+  {
+    href: "/",
+    label: "Blog",
+  },
+  {
+    href: "/",
+    label: "Sobre nós",
+  },
+  {
+    href: "/",
+    label: "Para empresas",
   },
 ];
 
@@ -15,17 +31,17 @@ export const Header = () => {
   return (
     <header className="max-w-screen-lg mx-auto px-4 py-4 flex items-center justify-between">
       <Link href="/">
-        <div className="text-4xl font-bold text-zinc-900 select-none">⚡</div>
+        <div className="text-4xl font-bold text-white select-none">Rocketseat</div>
       </Link>
 
-      <div className="flex gap-4 items-center">
-        <nav className="flex gap-4 items-center ">
+      <div className="">
+        <nav className="">
           {nav.map((item) => {
             const { href, label } = item;
 
             return (
               <Link href={href} key={href}>
-                <span className={`text-sm  text-zinc-700`}>{label}</span>
+                <span className={`text-sm text-white hover:text-zinc-900 transition duration-300 ease-in-out cursor-pointer`}>{label}</span>
               </Link>
             );
           })}
