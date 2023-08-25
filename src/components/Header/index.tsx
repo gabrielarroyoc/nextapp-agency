@@ -39,14 +39,14 @@ export const Header = () => {
       </Link>
 
       <div className="">
-        <nav className="flex justify-between text-gray-200">
+        <nav className="flex justify-between text-gray-200 ">
           {nav.map((item) => {
             const { href, label } = item
 
             return (
               <Link href={href} key={href}>
                 <span
-                  className={`text-linksNavHeader cursor-pointer p-3 text-sm transition duration-300 ease-in-out`}
+                  className={`text-linksNavHeader cursor-pointer rounded-md p-3 text-sm transition duration-300 ease-in-out hover:bg-gray-500`}
                 >
                   {label}
                 </span>
@@ -56,12 +56,18 @@ export const Header = () => {
         </nav>
       </div>
 
-      <div className="flex items-center justify-between text-sm">
-        <a className="flex items-center gap-2 px-6  py-3" href="/">
+      <div className="flex items-center justify-between gap-6 text-sm">
+        <a
+          className="flex items-center gap-2 rounded-md px-6 py-3 hover:bg-gray-500"
+          href="/"
+        >
           <User className="stroke-rocket-500" size={20} />
           ENTRAR
         </a>
-        <a className="rounded-md border border-rocket-500 px-6 py-3 " href="/">
+        <a
+          className="rounded-md border border-rocket-500 px-6 py-3 hover:bg-rocket-500"
+          href="/"
+        >
           CRIAR CONTA
         </a>
       </div>

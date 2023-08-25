@@ -13,6 +13,7 @@ const config: Config = {
         gray: {
           200: '#C4C4CC',
           300: '#C4C4CC',
+          500: '#323238',
           700: '#29292E',
         },
         rocket: {
