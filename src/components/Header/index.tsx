@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <header className="gray-500 mx-auto flex w-full items-center justify-between border-b border-gray-700 px-10 py-6">
       <Link href="/">
-        <div className="select-none text-4xl font-bold text-white">
+        <div className="ml-2.5 select-none text-4xl font-bold text-white">
           <Image width={200} height={40} src="logo-rocket.svg" alt="Logo" />{' '}
         </div>
       </Link>
@@ -56,7 +56,7 @@ export const Header = () => {
         </nav>
       </div>
 
-      <div className="flex items-center justify-between gap-6 text-sm">
+      <div className="mr-2.5 flex items-center justify-between gap-6 text-sm">
         <a
           className="flex items-center gap-2 rounded-md px-6 py-3 hover:bg-gray-500"
           href="/"

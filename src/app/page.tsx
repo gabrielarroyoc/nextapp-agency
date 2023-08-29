@@ -27,16 +27,16 @@ export default function Home() {
             </a>
           </div>
           <Image
-            width="965"
-            height="800"
-            className="min-h-[256px] w-full min-w-[365px] object-cover object-left pl-5 pr-[-20px] md:px-5"
+            width="2000"
+            height="2000"
+            className="object-cover object-left pl-5 pr-[-20px] md:px-5 "
             alt=""
             src={'/bg-platform.svg'}
           />
         </div>
         <Image
           fill
-          className="z-[-1] max-h-[88%] object-cover object-left-top pt-16"
+          className="brightness-40 z-[-1] max-h-[88%] object-cover object-left-top pt-16 blur-[1px]"
           alt="imagem de fundo"
           src={'/bg-hero-section.svg'}
           style={{
@@ -48,6 +48,14 @@ export default function Home() {
             color: 'transparent',
           }}
         />
+      </section>
+      <section>
+        <div>
+          <h2 className="text-center text-purpleRocket">
+            EMPRESAS QUE JÁ LEVARAM SEUS DEVS PARA O <br />
+            PRÓXIMO NÍVEL
+          </h2>
+        </div>
       </section>
     </main>
   )
