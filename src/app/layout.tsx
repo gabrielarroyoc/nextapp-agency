@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from '../components/Header/index'
-import { NavigationMenuContent } from '@radix-ui/react-navigation-menu'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -34,7 +33,6 @@ export default function RootLayout({
           height={4}
         />
         <Header />
-        <NavigationMenuContent />
         {children}
       </body>
     </html>
