@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
+import { blackA, mauve, violet, indigo, purple } from '@radix-ui/colors'
+import plugin from 'tailwindcss/plugin'
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,6 +12,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ...blackA,
+        ...mauve,
+        ...violet,
+        ...purple,
+        ...indigo,
+
         purpleRocket: '#996DFF',
         gray: {
           200: '#C4C4CC',
@@ -68,5 +77,13 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities }) => {
+      matchUtilities({
+        perspective: (value) => ({
+          perspective: value,
+        }),
+      })
+    }),
+  ],
 }
