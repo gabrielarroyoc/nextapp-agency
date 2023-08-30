@@ -184,6 +184,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <a
+          className="flex w-full max-w-[233px] rounded-md border border-rocket-500 bg-rocket-500 px-6 py-4"
+          href="/"
+        >
+          QUERO SABER MAIS
+        </a>
       </section>
     </main>
   )
