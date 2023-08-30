@@ -77,7 +77,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
   plugins: [
     plugin(({ matchUtilities }) => {
       matchUtilities({

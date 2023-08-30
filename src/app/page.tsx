@@ -51,10 +51,138 @@ export default function Home() {
       </section>
       <section>
         <div>
-          <h2 className="text-center text-purpleRocket">
+          <h3 className="text-center text-base font-medium  text-purpleRocket">
             EMPRESAS QUE JÁ LEVARAM SEUS DEVS PARA O <br />
             PRÓXIMO NÍVEL
-          </h2>
+          </h3>
+          <div className="hidden xl:my-[60px] xl:flex xl:flex-col xl:gap-[60px]">
+            <div className="flex justify-center gap-10">
+              <Image
+                src={'/companies/mercado-livre.svg'}
+                width={150}
+                alt="mercado livre"
+                height={150}
+              />
+              <Image
+                src={'/companies/vtex.svg'}
+                width={150}
+                alt="vtex"
+                height={150}
+              />
+              <Image
+                src={'/companies/globo.svg'}
+                width={150}
+                alt="globo"
+                height={150}
+              />
+              <Image
+                src={'/companies/ifood.svg'}
+                width={150}
+                alt="ifood"
+                height={150}
+              />
+              <Image
+                src={'/companies/itau.svg'}
+                width={150}
+                alt="itau"
+                height={150}
+              />
+              <Image
+                src={'/companies/stone.svg'}
+                width={150}
+                alt="stone"
+                height={150}
+              />
+              <Image
+                src={'/companies/compass-uol.svg'}
+                width={150}
+                alt="compass-uol"
+                height={150}
+              />
+              <Image
+                src={'/companies/totvs.svg'}
+                width={150}
+                alt="totvs"
+                height={150}
+              />
+            </div>
+            <div className="flex justify-center gap-10">
+              <Image
+                src={'/companies/accenture.svg'}
+                width={150}
+                alt="accenture"
+                height={150}
+              />
+              <Image
+                src={'/companies/twilio.svg'}
+                width={150}
+                alt="twilio"
+                height={150}
+              />
+              <Image
+                src={'/companies/riachuelo.svg'}
+                width={150}
+                alt="riachuelo"
+                height={150}
+              />
+              <Image
+                src={'/companies/suzano.svg'}
+                width={150}
+                alt="suzano"
+                height={150}
+              />
+              <Image
+                src={'/companies/datadog.svg'}
+                width={150}
+                alt="datadog"
+                height={150}
+              />
+              <Image
+                src={'/companies/invillia.svg'}
+                width={150}
+                alt="invillia"
+                height={150}
+              />
+              <Image
+                src={'/companies/fcamara.svg'}
+                width={150}
+                alt="fcamara"
+                height={150}
+              />
+            </div>
+            <div className="flex justify-center gap-10">
+              <Image
+                src={'/companies/thoughtworks.svg'}
+                width={150}
+                alt="thoughtworks"
+                height={150}
+              />
+              <Image
+                src={'/companies/banco-do-brasil.svg'}
+                width={150}
+                alt="banco-do-brasil"
+                height={150}
+              />
+              <Image
+                src={'/companies/ambev-tech.svg'}
+                width={150}
+                alt="ambev-tech"
+                height={150}
+              />
+              <Image
+                src={'/companies/radix.svg'}
+                width={150}
+                alt="radix"
+                height={150}
+              />
+              <Image
+                src={'/companies/luizalabs.svg'}
+                width={150}
+                alt="luizalabs"
+                height={150}
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>
