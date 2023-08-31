@@ -38,6 +38,10 @@ module.exports = {
           900: '#372560',
         },
       },
+      backgroundImage: {
+        'gradient-radial-gray':
+          'radial-gradient(circle at center,#505059,rgba(80,80,89,0))',
+      },
       keyframes: {
         enterFromRight: {
           from: { opacity: 0, transform: 'translateX(200px)' },

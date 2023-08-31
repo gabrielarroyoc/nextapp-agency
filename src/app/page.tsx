@@ -49,8 +49,8 @@ export default function Home() {
           }}
         />
       </section>
-      <section>
-        <div className="items-center py-20 text-center">
+      <section className="pb-36">
+        <div className="items-center text-center">
           <h3 className="text-center text-base font-medium uppercase   text-purpleRocket">
             empresas que já levaram seus devs para o <br />
             próximo nível
@@ -211,19 +211,27 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section>
+      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
+      <section className="py-36">
         <div>
-          <h3 className="text-center text-base font-medium  text-purpleRocket">
+          <h2 className="mb-4 text-center text-base font-medium tracking-widest  text-purpleRocket">
             SIMPLES E FÁCIL
-          </h3>
-          <h3 className="text-center text-[40px] text-base font-medium text-white">
+          </h2>
+          <h2
+            className="pb-8 text-center text-2xl font-bold 
+       text-white"
+          >
             Entenda como funciona
-          </h3>
+          </h2>
+
           <div className="mt-7 border border-b-0 border-gray-600 text-white md:grid md:grid-cols-3 md:divide-x">
             <div className="flex flex-col border-b border-gray-600 p-6 hover:bg-gray-800">
               <span className="text-2xl text-gray-400">01</span>
               <span className="pt-6 text-xl text-gray-100">
-                Cadastre sua empresa através do formulário clicando aqui
+                Cadastre sua empresa através do formulário clicando{' '}
+                <a href="/" className="text-green-500 underline">
+                  aqui
+                </a>
               </span>
             </div>
             <div className="flex flex-col border-b border-gray-600 p-6 hover:bg-gray-800">
@@ -261,6 +269,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
+      <section className="py-36"></section>
     </main>
   )
 }
