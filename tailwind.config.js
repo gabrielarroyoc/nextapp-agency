@@ -79,6 +79,9 @@ module.exports = {
       borderRadius: {
         md: '5px',
       },
+      fontSize: {
+        base: ['1rem', '1.6rem'],
+      },
     },
   },
   plugins: [

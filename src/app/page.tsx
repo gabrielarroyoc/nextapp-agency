@@ -211,7 +211,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
+      <div className="bg-gradient-radial-gray flex h-[2px] w-full items-center justify-center"></div>
       <section className="py-36">
         <div>
           <h2 className="mb-4 text-center text-base font-medium tracking-widest  text-purpleRocket">
@@ -269,8 +269,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
-      <section className="py-36"></section>
+      <div className="bg-gradient-radial-gray relative flex h-[2px] w-full items-center justify-center"></div>
+      <section className="flex w-full content-center py-36">
+        <h1 className="text-4xl font-bold">
+          Capacite e evolua seu time de devs com a Rocketseat
+        </h1>
+        <form></form>
+        <Image
+          width={100}
+          height={100}
+          className="absolute"
+          src="/vector-section.svg"
+          alt="Background-Section"
+        ></Image>
+      </section>
     </main>
   )
 }
