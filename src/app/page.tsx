@@ -7,13 +7,13 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[1256px] space-y-[60px] lg:space-y-20">
           <div className="flex w-full flex-col items-center gap-6 px-5 text-center">
             <div className="max-w-[727px] space-y-4">
-              <h2 className="text-center text-base font-medium text-purpleRocket">
+              <h3 className="text-center text-base font-medium text-purpleRocket">
                 PLATAFORMA PARA SUA EMPRESA
-              </h2>
-              <h2 className="text-center text-5xl font-bold text-white">
+              </h3>
+              <h1 className="text-center text-5xl font-bold text-white">
                 Impulsione a produtividade e leve <br></br> seu time para o
                 próximo nível
-              </h2>
+              </h1>
             </div>
             <p className="font-regular  mt-4 text-center text-xl text-white">
               Engajar, capacitar e acompanhar o aprendizado do seu <br></br>{' '}
@@ -211,12 +211,12 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <div className="bg-gradient-radial-gray flex h-[2px] w-full items-center justify-center"></div>
+      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
       <section className="py-36">
         <div>
-          <h2 className="mb-4 text-center text-base font-medium tracking-widest  text-purpleRocket">
+          <h3 className="mb-4 text-center text-base font-medium tracking-widest  text-purpleRocket">
             SIMPLES E FÁCIL
-          </h2>
+          </h3>
           <h2
             className="pb-8 text-center text-2xl font-bold 
        text-white"
@@ -269,19 +269,24 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="bg-gradient-radial-gray relative flex h-[2px] w-full items-center justify-center"></div>
-      <section className="flex w-full content-center py-36">
-        <h1 className="text-4xl font-bold">
+      <div className=" flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
+      <section className="relative w-full flex-col content-center gap-14 py-36">
+        <h2 className="z-10	text-4xl font-bold">
           Capacite e evolua seu time de devs com a Rocketseat
-        </h1>
-        <form></form>
+        </h2>
+        <form className="z-10	"></form>
         <Image
-          width={100}
-          height={100}
+          fill
           className="absolute"
           src="/vector-section.svg"
           alt="Background-Section"
         ></Image>
+        <div>
+          <form className="px-8">
+            <h3>Solicite uma demonstração gratuita</h3>
+            <div className="gap-4"></div>
+          </form>
+        </div>
       </section>
     </main>
   )
