@@ -269,24 +269,46 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className=" flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
-      <section className="relative w-full flex-col content-center gap-14 py-36">
-        <h2 className="z-10	text-4xl font-bold">
+      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
+      <section className="max-[494px]: relative flex w-full flex-col content-center gap-14 py-36">
+        <h2 className="z-10 text-center	text-4xl font-bold">
           Capacite e evolua seu time de devs com a Rocketseat
         </h2>
-        <form className="z-10	"></form>
+        <div className="w-full ">
+          <form className="gap-4 p-8">
+            <h3 className="text-2xl">Solicite uma demonstração gratuita</h3>
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+              <div>
+                {' '}
+                <input type="text" placeholder="Seu nome completo" />
+              </div>
+              <div>
+                <input type="email" placeholder="Digite seu e-mail" />
+              </div>
+              <div>
+                <input type="tel" placeholder="Número de telefone" />
+              </div>
+              <div>
+                <input type="tel" placeholder="Nome da empresa" />
+              </div>
+              <div>
+                <input type="tel" placeholder="Quantidade de funcionários" />
+              </div>
+              <div>
+                <input type="text" placeholder="Qual seu cargo" />
+              </div>
+              <div>
+                <input type="text" placeholder="Segmento da empresa" />
+              </div>
+            </div>
+          </form>
+        </div>
         <Image
           fill
           className="absolute"
           src="/vector-section.svg"
           alt="Background-Section"
         ></Image>
-        <div>
-          <form className="px-8">
-            <h3>Solicite uma demonstração gratuita</h3>
-            <div className="gap-4"></div>
-          </form>
-        </div>
       </section>
     </main>
   )
