@@ -275,8 +275,8 @@ export default function Home() {
         <h2 className="z-10 text-center	text-4xl font-bold">
           Capacite e evolua seu time de devs com a Rocketseat
         </h2>
-        <div className="w-full ">
-          <form className="gap-4 p-8">
+        <div className="z-10 w-full">
+          <form className="gap-4 bg-gray-900 p-8">
             <h3 className="text-2xl">Solicite uma demonstração gratuita</h3>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <div>
