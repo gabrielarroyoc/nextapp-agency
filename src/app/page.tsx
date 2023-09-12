@@ -1,4 +1,14 @@
-import { Building2, Code2, Mail, Smartphone, User2, Users2 } from 'lucide-react'
+import {
+  Building2,
+  Code2,
+  Briefcase,
+  Mail,
+  Smartphone,
+  User2,
+  Users2,
+  Store,
+  ChevronDown,
+} from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -270,12 +280,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray"></div>
+      <div className="flex h-[2px] w-full items-center justify-center bg-gradient-radial-gray">
+        {' '}
+        <button className="flex h-10 w-10 flex-col items-center justify-center rounded-full bg-purpleRocket hover:scale-110">
+          {' '}
+          <ChevronDown className="h-2 w-3 animate-pulse"></ChevronDown>
+          <ChevronDown className="h-2 w-3 animate-pulse"></ChevronDown>
+        </button>
+      </div>
       <section className="max-[494px]: relative flex w-full flex-col content-center gap-14 py-36">
         <h2 className="z-10 text-center	text-4xl font-bold">
           Capacite e evolua seu time de devs com a Rocketseat
         </h2>
-        <div className="z-10 w-full">
+        <div className="rounded- z-10 w-full overflow-hidden rounded-[10px] border border-transparent bg-gradient-to-b from-gray-600 to-gray-800 bg-origin-border ">
           <form className="gap-4 bg-gray-900 p-8">
             <h3 className="text-2xl">Solicite uma demonstração gratuita</h3>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -360,7 +377,7 @@ export default function Home() {
               <div>
                 <div className="relative rounded-[5px]">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <Mail className="h-4 w-4" />
+                    <Briefcase className="h-4 w-4" />
                   </div>
                   <input
                     className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
@@ -373,7 +390,7 @@ export default function Home() {
               <div>
                 <div className="relative rounded-[5px]">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <Mail className="h-4 w-4" />
+                    <Store className="h-4 w-4" />
                   </div>
                   <input
                     className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
