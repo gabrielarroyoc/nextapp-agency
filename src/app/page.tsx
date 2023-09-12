@@ -1,3 +1,4 @@
+import { Building2, Code2, Mail, Smartphone, User2, Users2 } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -279,33 +280,115 @@ export default function Home() {
             <h3 className="text-2xl">Solicite uma demonstração gratuita</h3>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <div>
-                {' '}
-                <input type="text" placeholder="Seu nome completo" />
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <User2 className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="name"
+                    placeholder="Seu nome completo"
+                  />
+                </div>
               </div>
               <div>
-                <input type="email" placeholder="Digite seu e-mail" />
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <Mail className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                  />
+                </div>
               </div>
               <div>
-                <input type="tel" placeholder="Número de telefone" />
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <Smartphone className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="telefone"
+                    placeholder="Número de telefone"
+                  />
+                </div>
               </div>
               <div>
-                <input type="tel" placeholder="Nome da empresa" />
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <Building2 className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="empresa"
+                    placeholder="Nome da empresa"
+                  />
+                </div>
               </div>
               <div>
-                <input type="tel" placeholder="Quantidade de funcionários" />
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <Users2 className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="employees"
+                    placeholder="Quantidade de funcionários"
+                  />
+                </div>
               </div>
               <div>
-                <input type="text" placeholder="Qual seu cargo" />
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <Code2 className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="Devs"
+                    placeholder="Quantidade de Devs"
+                  />
+                </div>
               </div>
               <div>
-                <input type="text" placeholder="Segmento da empresa" />
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <Mail className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="cargo"
+                    placeholder="Qual seu cargo"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="relative rounded-[5px]">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <Mail className="h-4 w-4" />
+                  </div>
+                  <input
+                    className="h-[54px] w-full min-w-[288px] rounded-[5px] border border-gray-700 bg-gray-700 p-2.5 pl-10 text-white placeholder-gray-200 outline-none hover:border hover:border-rocket-500"
+                    type="text"
+                    name="segmento"
+                    placeholder="Segmento da empresa"
+                  />
+                </div>
               </div>
             </div>
           </form>
         </div>
         <Image
           fill
-          className="absolute"
+          className="absolute z-[-1]"
           src="/vector-section.svg"
           alt="Background-Section"
         ></Image>
