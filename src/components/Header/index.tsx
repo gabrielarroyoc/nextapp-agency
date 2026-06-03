@@ -1,76 +1,114 @@
-import Image from 'next/image'
+'use client'
+
 import Link from 'next/link'
-import { User } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 const nav = [
-  {
-    href: '/',
-    label: 'Home',
-  },
-  {
-    href: '/',
-    label: 'Cursos e Programas',
-  },
-  {
-    href: '/',
-    label: 'Eventos',
-  },
-  {
-    href: '/',
-    label: 'Blog',
-  },
-  {
-    href: '/',
-    label: 'Sobre nós',
-  },
-  {
-    href: '/',
-    label: 'Para empresas',
-  },
+  { href: '#sobre', label: 'Sobre a Rocketseat' },
+  { href: '#ecossistema', label: 'Ecossistema' },
+  { href: '#conteudos', label: 'Conteúdos' },
+  { href: '#diagnostico', label: 'Diagnóstico de IA' },
+  { href: '#depoimentos', label: 'Depoimentos' },
+  { href: '#planos', label: 'Ver planos' },
+  { href: '#duvidas', label: 'Dúvidas' },
 ]
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <header className="gray-500 mx-auto flex w-full items-center justify-between border-b border-gray-700 px-10 py-6">
-      <Link href="/">
-        <div className="ml-2.5 select-none text-4xl font-bold text-white">
-          <Image width={200} height={40} src="logo-rocket.svg" alt="Logo" />{' '}
-        </div>
-      </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-800/60 bg-zinc-950/90 text-white backdrop-blur">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link
+          className="flex select-none items-center gap-3"
+          href="#inicio"
+          aria-label="Rocketseat para empresas"
+        >
+          <Image
+            width={200}
+            height={40}
+            src="/logo-rocket.svg"
+            alt="Rocketseat Logo"
+            className="h-8 w-auto"
+          />
+          <span className="hidden border-l border-zinc-800 pl-3 text-xs font-bold uppercase tracking-wider text-zinc-500 sm:inline">
+            Para Empresas
+          </span>
+        </Link>
 
-      <div className="">
-        <nav className="flex justify-between text-gray-200 ">
-          {nav.map((item) => {
-            const { href, label } = item
-
-            return (
-              <Link href={href} key={href}>
-                <span
-                  className={`text-linksNavHeader cursor-pointer rounded-md p-3 text-sm transition duration-300 ease-in-out hover:bg-gray-500`}
-                >
-                  {label}
-                </span>
-              </Link>
-            )
-          })}
+        <nav className="hidden items-center gap-1 text-sm text-zinc-400 lg:flex">
+          {nav.map(({ href, label }) => (
+            <Link
+              className="rounded-md px-3 py-2 transition hover:bg-zinc-900 hover:text-white"
+              href={href}
+              key={label}
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
+
+        <div className="hidden items-center gap-6 text-sm font-medium lg:flex">
+          <a
+            className="text-zinc-400 transition hover:text-white"
+            href="#cadastro"
+          >
+            Entrar
+          </a>
+          <a
+            className="rounded bg-emerald-600 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-emerald-700"
+            href="#cadastro"
+          >
+            Demonstração
+          </a>
+        </div>
+
+        <button
+          aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={isOpen}
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-zinc-800 text-white transition hover:border-emerald-500 lg:hidden"
+          type="button"
+          onClick={() => setIsOpen((state) => !state)}
+        >
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
 
-      <div className="mr-2.5 flex items-center justify-between gap-6 text-sm">
-        <a
-          className="flex items-center gap-2 rounded-md px-6 py-3 hover:bg-gray-500"
-          href="/"
-        >
-          <User className="stroke-rocket-500" size={20} />
-          ENTRAR
-        </a>
-        <a
-          className="rounded-md border border-rocket-500 px-6 py-3 hover:bg-rocket-500"
-          href="/"
-        >
-          CRIAR CONTA
-        </a>
-      </div>
+      {isOpen && (
+        <div className="border-zinc-850 border-t bg-zinc-950 px-4 py-4 lg:hidden">
+          <nav className="flex flex-col gap-1">
+            {nav.map(({ href, label }) => (
+              <Link
+                className="rounded-md px-3 py-3 text-sm text-zinc-400 transition hover:bg-zinc-900 hover:text-white"
+                href={href}
+                key={label}
+                onClick={() => setIsOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
+            <hr className="my-3 border-zinc-800" />
+            <div className="flex flex-col gap-3 px-3">
+              <a
+                className="py-2 text-center text-sm font-medium text-zinc-400 hover:text-white"
+                href="#cadastro"
+                onClick={() => setIsOpen(false)}
+              >
+                Entrar
+              </a>
+              <a
+                className="rounded bg-emerald-600 px-4 py-3 text-center text-sm font-bold uppercase tracking-wider text-white"
+                href="#cadastro"
+                onClick={() => setIsOpen(false)}
+              >
+                Demonstração
+              </a>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
